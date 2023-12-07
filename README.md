@@ -1,25 +1,25 @@
 # ETL_Project
-An ETL process was used to tabulate wine review data, determine the most & least popular wine varieties, 
+Used an ETL process to tabulate wine review data, determine the most & least popular wine varieties, 
 and load the data into PostgreSQL.
 
 
-Extraction Steps
-
--Data for different wine ratings was found on Kaggle and Dataworld websites. The orginal files came 
-in various formats including CSV, JSON and XLXS.
-
--The Kaggle data was from winemag.com (Wine Magazine’s web site). The CSV file was loaded into GitHub.
-
--The Dataworld data was originally available in CSV, XLXS and JSON format, but some of the symbols were 
-not UTF-8 characters. This was addressed by reading the XLXS file version.
-
--A column was added to both extracted Pandas Dataframes indicating the source of the data: WM or DW.  
-This was to allow duplicates to be removed and to average the rating and price of any wine in both WM and DW 
-and change the source to indicate it was both.
-
+<b>Extraction Steps</b><br />
+<br />
+-Found data for different wine ratings on Kaggle and Dataworld websites. The orginal files came 
+in various formats including CSV, JSON and XLXS.<br />
+![image](https://github.com/KotR9001/Wine_Ratings_ETL/assets/57807780/02cff73a-472e-4b7f-9c0b-66ee773cbbeb)<br />
+[tab][space]-The Kaggle data was from winemag.com (Wine Magazine’s web site). Loaded the CSV file into GitHub.<br />
+[tab][space]-The Dataworld data was originally available in CSV, XLXS and JSON format, but some of the symbols were 
+not UTF-8 characters. Addressed this by reading the XLXS file version.<br />
+-Added a column to both extracted Pandas Dataframes indicating the source of the data: WM (Wine Magazine) or DW (Dataworld).<br /> 
+[tab][space]-Did this to allow duplicates to be removed and to average the rating and price of any wine in both WM and DW 
+and change the source to indicate it was both.<br />
+![image](https://github.com/KotR9001/Wine_Ratings_ETL/assets/57807780/4426ff15-bf40-4be1-b8cd-6d7b8d119b78)<br />
+![image](https://github.com/KotR9001/Wine_Ratings_ETL/assets/57807780/bcb42e17-1a48-4ef7-84e1-b1df50f6b780)<br />
+<br />
 -The Winemag file did not have vintage as a column. The title of a wine is the winery, the vintage and 
-the designation.  The vintage was extracted from the column of string variables under title. The results were 
-stored as integers in a vintage column.
+the designation.  Extracted the vintage from the column of string variables under title. The results were 
+stored as integers in a vintage column.<br />
 
 -The Dataworld file had the Vintage column as a mixture of datetime variables and strings. A subroutine 
 converted them into integers for the vintage year and replaced the Vintage column.
