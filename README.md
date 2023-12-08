@@ -1,8 +1,8 @@
 # ETL_Project
 Used an ETL process to tabulate wine review data, determine the most & least popular wine varieties, 
 and load the data into PostgreSQL.
-
-
+<br />
+<br />
 <b>Extraction Steps</b><br />
 <br />
 -Found data for different wine ratings on Kaggle and Dataworld websites. The orginal files came 
@@ -23,7 +23,8 @@ in various formats including CSV, JSON and XLXS.<br />
 	-The Dataworld file had the Vintage column as a mixture of datetime variables and strings. A subroutine 
 	converted them into integers for the vintage year and replaced the Vintage column.
 ![image](https://github.com/KotR9001/Wine_Ratings_ETL/assets/57807780/bcb42e17-1a48-4ef7-84e1-b1df50f6b780)<br />
-
+<br />
+<br />
 <b>Transformation Steps</b><br />
 <br />
 Winemag-130k-v2.csv
@@ -64,6 +65,7 @@ Wines.xlsx & Combining<br />
 -Ran the ‘sort_values’ function on the resultant dataframe on ‘points’ to show the top 5 & bottom 5 popular 
 wine titles.<br />
 ![image](https://github.com/KotR9001/Wine_Ratings_ETL/assets/57807780/760ca12b-49b6-4704-94ae-8c9a59a2bd3f)<br />
+<br />
 <br />
 <b>Loading Steps</b><br />
 <br />
